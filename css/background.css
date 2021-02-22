@@ -15,7 +15,8 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-    z-index: -20;
+    z-index: -20;    
+    
 }
 .elements li{
     position: absolute;
@@ -25,8 +26,7 @@
     height: 20px;
     background: rgba(255, 255, 255, 0.2);
     animation: animate 25s linear infinite;
-    bottom: -150px;
-    
+    bottom: -150px;       
 }
 .elements li:nth-child(1){
     left: 25%;

@@ -88,8 +88,8 @@ main a:hover::after {
 }
 main a > div {
     border: 0.2rem solid var(--app-terciary-color);
-    width: 6rem;
-    height: 6rem;
+    width: 5rem;
+    height: 5rem;
     border-radius: 50%;     
     display: flex;
     justify-content: center; 
@@ -99,8 +99,7 @@ main a > div {
 main a:hover > div {
     border: 0.2rem solid var(--app-secondary-color);
 }
-main a span {
-        
+main a span {        
     font-size: 1.4rem;
     margin-top: 0.6rem; 
     color: var(--app-terciary-color);
@@ -142,9 +141,7 @@ footer a {
 footer a:hover {
     color: var(--app-secondary-color);
 }
-footer div a:hover {
-    animation: pulseAnimation 1s linear infinite;
-}
+
 
 /* Class style for some svg */
 .st0{ 
@@ -164,6 +161,10 @@ footer div a:hover {
     }    
     main > div {
         display: none;
+    }
+    main a > div {        
+        width: 6rem;
+        height: 6rem;
     }
 }
 
@@ -188,6 +189,10 @@ footer div a:hover {
         width: 18rem;
         height: 12rem;
     }
+    main a > div {        
+        width: 6rem;
+        height: 6rem;
+    }
     main > a > span {
         text-align: center;
     }
@@ -210,16 +215,3 @@ footer div a:hover {
         transform: scale(1);
     }
 }
-/* NOT WORKING
-@keyframes pulseAnimation {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.5);
-    }
-    100%{
-        transform: scale(1);
-    }
-}
-*/

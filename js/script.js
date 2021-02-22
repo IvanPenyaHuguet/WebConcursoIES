@@ -98,7 +98,7 @@ function randomBackgroundAnimation () {
         element.style.width = item.width;
         element.style.height = item.height;
         element.style.background = "rgba(0,0,0,0)"; // Quitar
-        element.style.backgroundImage = "url(img/"+ item.url + ")";
+        element.style.backgroundImage = "url(img/"+ item.url + ")";        
         const left = Math.floor(Math.random() * (90 - 10 + 1) ) + 10; // (Max - min +1) + min (todo incluido)
         element.style.left = left + "%";
         setTimeout(() => {            
