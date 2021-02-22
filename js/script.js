@@ -5,8 +5,12 @@ window.addEventListener("load", function () {
 
     // Shine effect on link buttons on hover, following mouse
     const aShiny = document.getElementsByTagName("a");
-    const aShinyList = Array.prototype.slice.call(aShiny);
+    let aShinyList = Array.prototype.slice.call(aShiny);
+    aShinyList = aShinyList.filter( a => {
+        return a.parentElement.nodeName == "MAIN";
+    });
     aShinyList.forEach( (button, index) => {
+        console.log(button);
         button.addEventListener("mousemove", e => {
             const { x, y } = button.getBoundingClientRect();
             button.style.setProperty("--x", e.clientX - x);
