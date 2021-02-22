@@ -90,6 +90,7 @@ main a > div {
     border: 0.2rem solid var(--app-terciary-color);
     width: 5.5rem;
     height: 5.5rem;
+    min-width: 5.5rem;
     border-radius: 50%;     
     display: flex;
     justify-content: center; 
@@ -100,8 +101,7 @@ main a:hover > div {
     border: 0.2rem solid var(--app-secondary-color);
 }
 main a span {        
-    font-size: 1.4rem;
-    margin-top: 0.6rem; 
+    font-size: 1.4rem;     
     color: var(--app-terciary-color);
 }
 main a:hover span {
@@ -165,7 +165,7 @@ footer a:hover {
     main a > div {        
         width: 6rem;
         height: 6rem;
-    }
+    }    
     svg {        
         width: 4rem;
         height: 4rem;           
@@ -199,7 +199,8 @@ footer a:hover {
     }
     main > a > span {
         text-align: center;
-    }
+        margin-top: 0.6rem;
+    }    
     svg {        
         width: 4rem;
         height: 4rem;           
