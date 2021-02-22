@@ -142,7 +142,7 @@ footer a {
 footer a:hover {
     color: var(--app-secondary-color);
 }
-footer > div > a:hover {
+footer div a:hover {
     animation: pulseAnimation 1s linear infinite;
 }
 
@@ -210,12 +210,16 @@ footer > div > a:hover {
         transform: scale(1);
     }
 }
-
+/* NOT WORKING
 @keyframes pulseAnimation {
     0% {
-        transform: scale(0);
+        transform: scale(1);
     }
-    100% {
-        transform: scale(0.5);
+    50% {
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(1);
     }
 }
+*/

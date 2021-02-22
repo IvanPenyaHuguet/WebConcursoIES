@@ -9,8 +9,7 @@ window.addEventListener("load", function () {
     aShinyList = aShinyList.filter( a => {
         return a.parentElement.nodeName == "MAIN";
     });
-    aShinyList.forEach( (button, index) => {
-        console.log(button);
+    aShinyList.forEach( (button, index) => {        
         button.addEventListener("mousemove", e => {
             const { x, y } = button.getBoundingClientRect();
             button.style.setProperty("--x", e.clientX - x);
