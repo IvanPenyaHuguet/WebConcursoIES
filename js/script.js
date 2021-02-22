@@ -1,5 +1,5 @@
 const pcMinSize = 1200;
-
+const tabletXLMinSize = 1024;
 
 window.addEventListener("load", function () {
 
@@ -44,14 +44,16 @@ function showInfo (hoverElement, index) {
 
 }
 function clickEffect(e){
-    let d = document.createElement("div");
-    d.className="clickEffect";
-    d.style.top=e.clientY+"px";
-    d.style.left=e.clientX+"px";
-    document.body.appendChild(d);
-    d.addEventListener('animationend',function(){
-        d.parentElement.removeChild(d);
-    }.bind(this));
+    if (window.innerWidth < pcMinSize) {
+        let d = document.createElement("div");
+        d.className="clickEffect";
+        d.style.top=e.clientY+"px";
+        d.style.left=e.clientX+"px";
+        document.body.appendChild(d);
+        d.addEventListener('animationend',function(){
+            d.parentElement.removeChild(d);
+        }.bind(this));
+    }
 }
     
 

@@ -18,7 +18,7 @@ Paleta de colores:
 }
 body {
     display: grid;
-    grid-template-rows: 20vh auto 20vh;
+    grid-template-rows: auto auto auto;
     background-color: var(--app-primary-background-color);    
 }
 header {
@@ -27,7 +27,8 @@ header {
     align-items: center;
     color: var(--app-terciary-color);    
     font-size: 1.8rem;
-    text-align: center;   
+    text-align: center;  
+    min-height: 10rem; 
 }
 main {
     margin: 0 10vw;
