@@ -34,7 +34,7 @@ main {
     margin: 0 10vw;
     display: grid;
     justify-items: center;
-    align-items: center;
+    align-items: center;    
 }
 main > div {
     position: absolute;
@@ -126,7 +126,7 @@ footer {
     justify-content: space-around;
     align-items: center;
     color: var(--app-terciary-color);
-    font-size: 1.5rem;
+    font-size: 1.5rem;    
 }
 footer div {
     width: 100%;
@@ -148,6 +148,14 @@ footer a {
 
 /* Tablet */
 @media (min-width: 768px) {
+    header {
+        min-height: 6rem;
+    }
+    main {
+        grid-template: 1fr 1fr 1fr/1fr 1fr;
+        grid-column-gap: 2rem;
+        margin: 0 10vw; /* Sobra ? */
+    }    
     main > div {
         display: none;
     }
