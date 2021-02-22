@@ -26,6 +26,7 @@ window.addEventListener("load", function () {
     changeBackgroundAnimatinHeight ();
     window.addEventListener("resize", changeBackgroundAnimatinHeight);
     
+    randomBackgroundAnimation ();
 });
 
 function showInfo (hoverElement, index) {
@@ -66,4 +67,49 @@ function changeBackgroundAnimatinHeight (){
     let d = document.getElementsByClassName("background-animation");    
     d[0].style.height = documentHeight+"px";
 }
+
+function randomBackgroundAnimation () {
+    const items = [{
+        name: "avion",
+        url: "avionpapel.png",
+        width:  "120px",
+        height: "64px"
+    },{
+        name: "pincel",
+        url: "pincel.png",
+        width:  "80px",
+        height: "35px"
+    },{
+        name: "atomo",
+        url: "atomo.png",
+        width:  "133px",
+        height: "123px"
+    }];
+
+    var rand = 1;
+    var int;
+    
+    int = window.setInterval(loopAnimation, rand);
+
+    function loopAnimation (){
+        let item = items[Math.floor(Math.random() * items.length)];
+        let ul = document.getElementsByClassName("elements");
+        let element = document.createElement("li");
+        element.style.width = item.width;
+        element.style.height = item.height;
+        element.style.background = "rgba(0,0,0,0)"; // Quitar
+        element.style.backgroundImage = "url(img/"+ item.url + ")";
+        const left = Math.floor(Math.random() * (90 - 10 + 1) ) + 10; // (Max - min +1) + min (todo incluido)
+        element.style.left = left + "%";
+        setTimeout(() => {            
+            element.parentNode.removeChild(element);
+        }, 25000);
+        ul[0].appendChild(element);        
+        rand = Math.round(Math.random()*(10000 - 3000 + 1) ) + 3000;
+        console.log(rand)
+        clearInterval(int);
+        int = setInterval(loopAnimation, rand);
+    }
+}
+
 
