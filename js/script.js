@@ -18,7 +18,10 @@ window.addEventListener("load", function () {
 
     // Click effect
     document.addEventListener('click',clickEffect);
-    
+
+    // Make background effect more consistent in mobile
+    changeBackgroundAnimatinHeight ();
+    window.addEventListener("resize", changeBackgroundAnimatinHeight);
     
 });
 
@@ -55,5 +58,9 @@ function clickEffect(e){
         }.bind(this));
     }
 }
-    
+function changeBackgroundAnimatinHeight (){
+    const documentHeight = document.body.scrollHeight;
+    let d = document.getElementsByClassName("background-animation");    
+    d[0].style.height = documentHeight+"px";
+}
 
