@@ -88,8 +88,8 @@ main a:hover::after {
 }
 main a > div {
     border: 0.2rem solid var(--app-terciary-color);
-    width: 5rem;
-    height: 5rem;
+    width: 5.5rem;
+    height: 5.5rem;
     border-radius: 50%;     
     display: flex;
     justify-content: center; 
@@ -109,8 +109,8 @@ main a:hover span {
 }
 svg {
     display: block;
-    width: 4rem;
-    height: 4rem;
+    width: 3rem;
+    height: 3rem;
     fill: var(--app-terciary-color);
     stroke: var(--app-terciary-color);    
 }
@@ -166,6 +166,10 @@ footer a:hover {
         width: 6rem;
         height: 6rem;
     }
+    svg {        
+        width: 4rem;
+        height: 4rem;           
+    }
 }
 
 /*  PC */
@@ -195,6 +199,10 @@ footer a:hover {
     }
     main > a > span {
         text-align: center;
+    }
+    svg {        
+        width: 4rem;
+        height: 4rem;           
     }
     footer {
         flex-direction: row;
