@@ -161,7 +161,7 @@ footer a:hover {
     main {
         grid-template: 1fr 1fr 1fr/1fr 1fr;
         grid-column-gap: 2rem;
-        margin: 0 10vw; /* Sobra ? */
+        margin: 0 10vw;
     }    
     main > div {
         display: none;
@@ -187,8 +187,7 @@ footer a:hover {
         font-size: 3.5rem;        
     }
     main {
-        grid-template: auto auto/1fr 1fr 1fr;
-        margin: 0 10vw; /* Sobra ? */
+        grid-template: auto auto/1fr 1fr 1fr;        
     }
     main > div {
         display: none;
@@ -217,21 +216,13 @@ footer a:hover {
     main a:hover::after {
         opacity: 0.6;
     }
-    main a > div {        
-        width: 6rem;
-        height: 6rem;
-        min-width: 6rem;
-        min-height: 6rem;
-    }
+    
     main > a > span {
         text-align: center;
         margin-top: 0.6rem;
         font-weight: 600;        
     }    
-    svg {        
-        width: 4rem;
-        height: 4rem;           
-    }
+    
     footer {
         flex-direction: row;
         margin-top: 2vh;

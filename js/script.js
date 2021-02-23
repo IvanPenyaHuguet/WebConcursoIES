@@ -37,7 +37,7 @@ function showInfo (hoverElement, index) {
                 "Plataforma Moodle del centro",
                 "Aula virtual para los alumnos de formación profesional semipresencial, conocida como Aules",
                 "Información de ERASMUS en el IES Camp de Morvedre",
-                "Actividades y programas en el IES camp de Morvedre"];
+                "Actividades y programas en el IES Camp de Morvedre"];
     const infoElement = document.querySelector("main > div");
    
 
