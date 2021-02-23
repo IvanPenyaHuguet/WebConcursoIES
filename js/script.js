@@ -31,9 +31,9 @@ window.addEventListener("load", function () {
 
 function showInfo (hoverElement, index) {
     const info = ["Página oficial del centro IES Camp de Morvedre",
-                "Página del IES Camp de Morvedre en la plataforma de la generalitat, mestra a casa",
+                "Página del IES Camp de Morvedre en la plataforma de la generalitat, mestre a casa",
                 "Plataforma Moodle del centro",
-                "Aula virtual para los alumnos de formación profesional semipresencial, conocido como Aules",
+                "Aula virtual para los alumnos de formación profesional semipresencial, conocida como Aules",
                 "Información de ERASMUS en el IES Camp de Morvedre",
                 "Actividades y programas en el IES camp de Morvedre"];
     const infoElement = document.querySelector("main > div");
@@ -105,8 +105,7 @@ function randomBackgroundAnimation () {
             element.parentNode.removeChild(element);
         }, 25000);
         ul[0].appendChild(element);        
-        rand = Math.round(Math.random()*(10000 - 3000 + 1) ) + 3000;
-        console.log(rand)
+        rand = Math.round(Math.random()*(10000 - 3000 + 1) ) + 3000;        
         clearInterval(int);
         int = setInterval(loopAnimation, rand);
     }
