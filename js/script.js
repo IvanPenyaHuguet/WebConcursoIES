@@ -1,5 +1,5 @@
 const pcMinSize = 1200;
-const tabletXLMinSize = 1024;
+
 
 window.addEventListener("load", function () {
 
