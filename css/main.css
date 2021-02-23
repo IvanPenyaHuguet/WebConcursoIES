@@ -4,13 +4,13 @@ Paleta de colores:
  Azul: #0049ff
  Azul clarito: #6cd0ff
 */
-:root {
-    --app-primary-color: #0099ff;
-    --app-secondary-color: #EBDD66;
-    --app-terciary-color: #fff;
-    --app-primary-background-color: #4e54c8;
-    --app-secondary-background-color: #8f94fb;
-    --app-button-background-color: rgb(0, 153, 255, 0.6);
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+:root {    
+    --app-secondary-color: #FFFA6F;
+    --app-terciary-color: #000;    
+    --app-button-background-color: rgb(51, 190, 255, 0.7);
 }
 * {
     margin: 0;
@@ -18,23 +18,29 @@ Paleta de colores:
 }
 body {
     display: grid;
-    grid-template-rows: auto auto auto;
-    background-color: var(--app-primary-background-color);    
+    grid-template-rows: auto auto auto;    
 }
 header {
     display: flex;
     justify-content: center;
-    align-items: center;
-    color: var(--app-terciary-color);    
+    align-items: end; 
+    padding-top: 1rem;      
     font-size: 1.8rem;
     text-align: center;  
-    min-height: 10rem; 
+    min-height: 6rem; 
+    font-family: 'Indie Flower', cursive;      
+}
+header h1 {
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    color: #ffdac1;
+    font-weight: bolder;
 }
 main {
     margin: 0 8vw;
     display: grid;
     justify-items: center;
-    align-items: center;    
+    align-items: center;  
+    font-family: 'Architects Daughter', cursive;  
 }
 main > div {
     position: absolute;
@@ -46,14 +52,22 @@ main > div {
     border-top: 0.3rem;
     display: none;
     color: var(--app-terciary-color);
-    font-size: 1.4rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    font-family: 'Indie Flower', cursive;     
 }
+
 hr {
-    height: 2px;
-    border: 0;
-    margin: 1.5rem;
+    height: 3px;
+    border: 0;        
+}
+main > div > p {
     animation: hrAnimation 0.75s linear;
-    background-image: linear-gradient(to right, rgb(255, 255, 255, 0), rgb(255, 255, 255, 1),rgb(255, 255, 255, 0));
+    background-image: linear-gradient(to right, rgb(255, 255, 255, 0), #bdecb6 ,rgb(255, 255, 255, 0));
+    height: 4rem;  
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
 }
 main a {
     display: flex;    
@@ -75,7 +89,7 @@ main a::after {
     /* Gradient bright*/
     opacity: 0.4;
     /* Circular gradient that fades out on the edges */
-    background: radial-gradient(white, rgba(57,132,255,0) 60%);
+    background: radial-gradient(#FFFA6F, rgba(57,132,255,0) 60%);
     width: 140px;
     height: 140px;
     top: calc(var(--y, 0) * 1px - 70px);
@@ -95,7 +109,7 @@ main a > div {
     border-radius: 50%;     
     display: flex;
     justify-content: center; 
-    align-items: center; 
+    align-items: center;     
     margin: 0 1rem; /**/       
 }
 main a:hover > div {
@@ -127,7 +141,9 @@ footer {
     justify-content: space-around;
     align-items: center;
     color: var(--app-terciary-color);
-    font-size: 1.5rem;    
+    font-size: 1.5rem;
+    margin-bottom: 2rem;  
+    font-family: 'Architects Daughter', cursive;  
 }
 footer div {
     width: 100%;
@@ -138,9 +154,12 @@ footer div {
 footer a {
     color: var(--app-terciary-color);
     font-style: italic;
+    background: linear-gradient(-45deg, #e8e7f0 50%, var(--app-secondary-color) 50%) right;
+    background-size: 210%;
+    transition: .5s ease-out;
 }
-footer a:hover {
-    color: var(--app-secondary-color);
+footer a:hover {    
+    background-position: left;    
 }
 
 
@@ -178,10 +197,10 @@ footer a:hover {
 /*  PC */
 @media (min-width: 1200px) {
     body {
-        grid-template-rows: 10vh 80vh 10vh;
+        grid-template-rows: 15vh 70vh 15vh;
     }
     header {
-        font-size: 3rem;
+        font-size: 3.5rem;        
     }
     main {
         grid-template: auto auto/1fr 1fr 1fr;
@@ -189,12 +208,13 @@ footer a:hover {
     }
     main > div {
         display: none;
-    }
+    }   
     main > a {
         flex-direction: column;
         justify-content: center;
         width: 18rem;
         height: 12rem;
+        
     }
     main a > div {        
         width: 6rem;
@@ -205,6 +225,7 @@ footer a:hover {
     main > a > span {
         text-align: center;
         margin-top: 0.6rem;
+        font-weight: 600;        
     }    
     svg {        
         width: 4rem;
@@ -212,8 +233,8 @@ footer a:hover {
     }
     footer {
         flex-direction: row;
-        margin-top: 0;
-        font-size: 2rem;
+        margin-top: 2vh;
+        font-size: 2rem;        
     }
     footer span {
         margin: 0 2rem 1rem;
@@ -223,9 +244,10 @@ footer a:hover {
 /* Animation */
 @keyframes hrAnimation {
     0% {
-        transform: scale(0);
+        transform: scale(0.7);
     }
     100% {
         transform: scale(1);
     }
 }
+
