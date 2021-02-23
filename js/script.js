@@ -26,6 +26,8 @@ window.addEventListener("load", function () {
     changeBackgroundAnimatinHeight ();
     window.addEventListener("resize", changeBackgroundAnimatinHeight);
     
+
+    // Random objects animation
     randomBackgroundAnimation ();
 });
 
