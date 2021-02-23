@@ -154,7 +154,7 @@ footer div {
 footer a {
     color: var(--app-terciary-color);
     font-style: italic;
-    background: linear-gradient(-45deg, #e8e7f0 50%, var(--app-secondary-color) 50%) right;
+    background: linear-gradient(-45deg, rgba(0,0,0,0) 50%, var(--app-secondary-color) 50%) right;
     background-size: 210%;
     transition: .5s ease-out;
 }

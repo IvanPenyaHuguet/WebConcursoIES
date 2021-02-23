@@ -82,8 +82,53 @@ function randomBackgroundAnimation () {
     },{
         name: "atomo",
         url: "atomo.png",
-        width:  "133px",
-        height: "123px"
+        width:  "75px",
+        height: "80px"
+    },{
+        name: "regla",
+        url: "regla.png",
+        width:  "60px",
+        height: "19px"
+    },{
+        name: "adn",
+        url: "adn.png",
+        width:  "57px",
+        height: "95px"
+    },{
+        name: "mochila",
+        url: "mochila2.png",
+        width:  "90px",
+        height: "99px"
+    },{
+        name: "cerebro",
+        url: "cerebro.png",
+        width:  "111px",
+        height: "108px"
+    },{
+        name: "ordenador",
+        url: "ordenador.png",
+        width:  "100px",
+        height: "95px"
+    },{
+        name: "calculadora",
+        url: "calculadora.png",
+        width:  "86px",
+        height: "104px"
+    },{
+        name: "libros",
+        url: "libros.png",
+        width:  "100px",
+        height: "88px"
+    },{
+        name: "pintura",
+        url: "pintura.png",
+        width:  "98px",
+        height: "95px"
+    },{
+        name: "globo",
+        url: "globo.png",
+        width:  "61px",
+        height: "80px"
     }];
 
     var rand = 1;
@@ -105,7 +150,7 @@ function randomBackgroundAnimation () {
             element.parentNode.removeChild(element);
         }, 25000);
         ul[0].appendChild(element);        
-        rand = Math.round(Math.random()*(10000 - 3000 + 1) ) + 3000;        
+        rand = Math.round(Math.random()*(8000 - 1000 + 1) ) + 1000;        
         clearInterval(int);
         int = setInterval(loopAnimation, rand);
     }
