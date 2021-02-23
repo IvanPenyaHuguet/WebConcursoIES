@@ -1,8 +1,8 @@
 /**
 Paleta de colores: 
- Cyan-Azul: #0099ff;
- Azul: #0049ff
- Azul clarito: #6cd0ff
+ Azul: rgb(51, 190, 255);
+ Amarillo: #FFFA6F;
+ Verde: #bdecb6;
 */
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
@@ -81,25 +81,9 @@ main a {
     width: 100%;
     height: 8rem;
     margin: 0.5rem 0;
-    box-shadow: 5px 3px 10px rgba(255, 255, 255, 0.2);
+    box-shadow: 5px 3px 10px rgb(51, 190, 255, 0.5);
 }
-main a::after {
-    content: '';
-    position: absolute;    
-    /* Gradient bright*/
-    opacity: 0.4;
-    /* Circular gradient that fades out on the edges */
-    background: radial-gradient(#FFFA6F, rgba(57,132,255,0) 60%);
-    width: 140px;
-    height: 140px;
-    top: calc(var(--y, 0) * 1px - 70px);
-    left: calc(var(--x, 0) * 1px - 70px);
-    opacity: 0;    
-    transition: opacity 0.2s;
-}
-main a:hover::after {
-    opacity: 0.6;
-}
+
 main a > div {
     border: 0.2rem solid var(--app-terciary-color);
     width: 5.5rem;
@@ -215,6 +199,23 @@ footer a:hover {
         width: 18rem;
         height: 12rem;
         
+    }
+    main a::after {
+        content: '';
+        position: absolute;    
+        /* Gradient bright*/
+        opacity: 0.4;
+        /* Circular gradient that fades out on the edges */
+        background: radial-gradient(#FFFA6F, rgba(57,132,255,0) 60%);
+        width: 140px;
+        height: 140px;
+        top: calc(var(--y, 0) * 1px - 70px);
+        left: calc(var(--x, 0) * 1px - 70px);
+        opacity: 0;    
+        transition: opacity 0.2s;
+    }
+    main a:hover::after {
+        opacity: 0.6;
     }
     main a > div {        
         width: 6rem;
