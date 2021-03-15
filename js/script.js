@@ -44,7 +44,7 @@ function showInfo (hoverElement, index) {
     hoverElement.addEventListener("mouseenter", () => {
         if (window.innerWidth > pcMinSize) {
             infoElement.style.display = "block";        
-            infoElement.children[1].textContent = info[index];
+            infoElement.children[0].textContent = info[index];
         }
     });
     hoverElement.addEventListener("mouseleave", () => {
