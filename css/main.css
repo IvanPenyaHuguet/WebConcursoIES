@@ -1,0 +1,245 @@
+/**
+Paleta de colores: 
+ Azul: rgb(51, 190, 255);
+ Amarillo: #FFFA6F;
+ Verde: #bdecb6;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+:root {    
+    --app-secondary-color: #FFFA6F;
+    --app-terciary-color: #000;    
+    --app-button-background-color: rgb(51, 190, 255, 0.7);
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: grid;
+    grid-template-rows: auto auto auto;    
+}
+header {
+    display: flex;
+    justify-content: center;
+    align-items: end; 
+    padding-top: 1rem;      
+    font-size: 1.8rem;
+    text-align: center;  
+    min-height: 6rem; 
+    font-family: 'Indie Flower', cursive;      
+}
+header h1 {
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    color: #ffdac1;
+    font-weight: bolder;
+}
+main {
+    margin: 0 8vw;
+    display: grid;
+    justify-items: center;
+    align-items: center;  
+    font-family: 'Architects Daughter', cursive;  
+}
+main > div {
+    position: absolute;
+    width: 60vw;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    border-top: 0.3rem;
+    display: none;
+    color: var(--app-terciary-color);
+    font-size: 1.6rem;
+    font-weight: bold;
+    font-family: 'Indie Flower', cursive;     
+}
+
+hr {
+    height: 3px;
+    border: 0;        
+}
+main > div > p {
+    animation: hrAnimation 0.75s linear;
+    background-image: linear-gradient(to right, rgb(255, 255, 255, 0), #bdecb6 ,rgb(255, 255, 255, 0));
+    height: 4rem;  
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+}
+main a {
+    display: flex;    
+    justify-content: start;     
+    align-items: center; 
+    background-color: var(--app-button-background-color);
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    border-radius: 1rem;
+    width: 100%;
+    height: 8rem;
+    margin: 0.5rem 0;
+    box-shadow: 5px 3px 10px rgb(51, 190, 255, 0.5);
+}
+
+main a > div {
+    border: 0.2rem solid var(--app-terciary-color);
+    width: 5.5rem;
+    height: 5.5rem;
+    min-width: 5.5rem;
+    min-height: 5.5rem;
+    border-radius: 50%;     
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    margin: 0 1rem; /**/       
+}
+main a:hover > div {
+    border: 0.2rem solid var(--app-secondary-color);
+}
+main a span {        
+    font-size: 1.4rem;     
+    color: var(--app-terciary-color);
+}
+main a:hover span {
+    color: var(--app-secondary-color);
+}
+svg {
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    fill: var(--app-terciary-color);
+    stroke: var(--app-terciary-color);    
+}
+main a:hover svg {
+    fill: var(--app-secondary-color);
+    stroke: var(--app-secondary-color);
+}
+footer {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--app-terciary-color);
+    font-size: 1.5rem;
+    margin-bottom: 2rem;  
+    font-family: 'Architects Daughter', cursive;  
+}
+footer div {
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    margin: 0 0 0.5rem;
+}
+footer a {
+    color: var(--app-terciary-color);
+    font-style: italic;
+    background: linear-gradient(-45deg, rgba(0,0,0,0) 50%, var(--app-secondary-color) 50%) right;
+    background-size: 210%;
+    transition: .5s ease-out;
+}
+footer a:hover {    
+    background-position: left;    
+}
+
+
+/* Class style for some svg */
+.st0{ 
+    fill-rule: evenodd;
+    clip-rule: evenodd;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    header {
+        min-height: 6rem;
+    }
+    main {
+        grid-template: 1fr 1fr 1fr/1fr 1fr;
+        grid-column-gap: 2rem;
+        margin: 0 10vw;
+    }    
+    main > div {
+        display: none;
+    }
+    main a > div {        
+        width: 6rem;
+        height: 6rem;
+        min-width: 6rem;
+        min-height: 6rem;
+    }    
+    svg {        
+        width: 4rem;
+        height: 4rem;           
+    }
+}
+
+/*  PC */
+@media (min-width: 1200px) {
+    body {
+        grid-template-rows: 15vh 70vh 15vh;
+    }
+    header {
+        font-size: 3.5rem;        
+    }
+    main {
+        grid-template: auto auto/1fr 1fr 1fr;        
+    }
+    main > div {
+        display: none;
+    }   
+    main > a {
+        flex-direction: column;
+        justify-content: center;
+        width: 18rem;
+        height: 12rem;
+        
+    }
+    main a::after {
+        content: '';
+        position: absolute;    
+        /* Gradient bright*/
+        opacity: 0.4;
+        /* Circular gradient that fades out on the edges */
+        background: radial-gradient(#FFFA6F, rgba(57,132,255,0) 60%);
+        width: 140px;
+        height: 140px;
+        top: calc(var(--y, 0) * 1px - 70px);
+        left: calc(var(--x, 0) * 1px - 70px);
+        opacity: 0;    
+        transition: opacity 0.2s;
+    }
+    main a:hover::after {
+        opacity: 0.6;
+    }
+    
+    main > a > span {
+        text-align: center;
+        margin-top: 0.6rem;
+        font-weight: 600;        
+    }    
+    
+    footer {
+        flex-direction: row;
+        margin-top: 2vh;
+        font-size: 2rem;        
+    }
+    footer span {
+        margin: 0 2rem 1rem;
+    }
+}
+
+/* Animation */
+@keyframes hrAnimation {
+    0% {
+        transform: scale(0.7);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
